@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
-}
+/**------------------Imports-------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap');
+/*font-family: 'Roboto Slab', serif;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*-----------------Main Setup-------------------*/
+.main-container {
+    max-width: 60%;
+    height: 100vh;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: rgb(32, 92, 148);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer {
+    width: 100%;
+    margin-top: auto;
+    align-self: center;
+    text-align: center;
+    color: rgb(21, 85, 146);
+    font-size: 1.10rem;
+    font-weight: 700;
 }
-
-.App-link {
-  color: #61dafb;
+/*----------------- border style-------------*/
+.underline {
+    height: 8px;
+    width: 100%;
+    background-color:rgb(40, 144, 241);
+    display: flex;
+    justify-content: space-between;
 }
+.underline-style {
+    display: flex;
+}
+.yellow {
+    background-color: rgb(250, 246, 24);
+    height: 100%;
+    width: 2rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.orange {
+    background-color: orangered;
+    height: 100%;
+    width: 1.5rem;
+}
+.foot {
+    margin-top: auto;
 }
