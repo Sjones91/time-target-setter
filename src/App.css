@@ -72,7 +72,7 @@ h1 {
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
-    margin: 20px auto;
+    margin: 5px auto;
     color:rgb(8, 31, 53)
 }
 .input-field {
@@ -83,7 +83,7 @@ h1 {
     
 }
 .output-text {
-    margin: 10px 10px;
+    margin: 0px 10px 5px;
     color: rgb(36, 113, 185);
 }
 .delivery-header {
@@ -107,6 +107,21 @@ h4, h2, label{
 }
 .employeeInput {
     flex-wrap: wrap;
+}
+.btn {
+    background-color: rgb(36, 113, 185);
+    max-width: 6rem;
+    margin: 5px auto;
+    color: aliceblue;
+    border-radius: 5px;
+    border:rgb(255, 255, 255) solid 2px;
+    padding: 5px;
+    font-family:  'Roboto Slab', serif;;
+    opacity: 85%;
+}
+.btn:hover {
+    cursor: pointer;
+    opacity: 100%;
 }
 
 /*----------------------Delivery input style---------------------*/
