@@ -12,6 +12,7 @@ function Delivery(props) {
     const calcPallets = () => {
         setTotalPallets(bsPallets + delPallets)
     }
+    
     /*Employee count*/
     
     const [employees,setEmployees] = useState(0);
@@ -24,7 +25,7 @@ function Delivery(props) {
     /*Calculate Time Target*/
     const [target,setTarget] = useState(0)
     const calcTarget = ()=>{
-        let finalTarget = totalPallets / employees * companyTarget
+        let finalTarget = Math.floor(totalPallets / employees * companyTarget)
         setTarget(finalTarget)
     }
     /*check fields populated and produce*/
@@ -56,6 +57,7 @@ function Delivery(props) {
             if(inputs[i].type == "text"){
                 inputs[i].value = "";
             }
+            inputs[i].style.borderColor = "rgb(32, 92, 148)"
         }
     }
 
@@ -73,11 +75,33 @@ function Delivery(props) {
             <div className="d-f-row jc-space-e">
                 <section className="d-f-col">
                     <label className="label-input">Delivery</label>
-                    <input id="del-input"type="text" className="input-field pallet-input"onChange={(e)=> setDelPallets(parseFloat(e.target.value))}></input>
+                    <input id="del-input"type="text" className="input-field pallet-input"
+                    onChange={(e)=> 
+                        {if(e.target.value >= 0){
+                            setDelPallets(parseFloat(e.target.value))
+                            e.target.style.borderColor = "rgb(32, 92, 148)";
+                        } else{
+                            setDelPallets(0)
+                            e.target.style.borderColor = "red";
+                            }
+                        }}>
+                    </input>
                 </section>
                 <section className="d-f-col">
                 <label className="label-input">Backstock</label>
-                    <input id="bs-input"type="text" className="input-field" onChange={(e)=> setBsPallets(parseFloat(e.target.value))}></input>
+                    <input id="bs-input"type="text" className="input-field" 
+                    onChange={(e)=> 
+                        {if(e.target.value >= 0){
+                            setBsPallets(parseFloat(e.target.value))
+                            e.target.style.borderColor = "rgb(32, 92, 148)";
+                        } else{
+                            setBsPallets(0)
+                            e.target.style.borderColor = "red";
+                            }
+                        }}
+                    >
+
+                    </input>
                 </section>
             </div>
             <h4 className="component-h4">Team Members</h4>
